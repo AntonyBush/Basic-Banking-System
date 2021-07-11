@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content %}
+<div style="margin-top:3%; margin-bottom:5%; margin-left:35%; padding:10px; width:80%">
+    <legend class="border-bottom mb-4" style="text-align: center;">Transfer History</legend>
+    <table class="table">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Transfer Time</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Sender</th>
+                <th scope="col">Receiver</th>
+            </tr>
+        </thead>
+        {% for transfer in transfers %}
+            <tbody style="font-size: medium;">
+                <tr>
+                  <th>{{transfer.id}}</th>
+                  <td>{{transfer.transfer_time}}</td>
+                  <td>{{transfer.transfer_amount}}</td>
+                  <td><a href="{% url 'profile' transfer.debit_ac %}" style="text-decoration: none;">{{transfer.debit_ac}}</a></td>
+                  <td><a href="{% url 'profile' transfer.credit_ac %}" style="text-decoration: none;">{{transfer.credit_ac}}</a></td>
+                </tr>
+            </tbody>
+          {% endfor %}
+      </table>
+</div>
+{% endblock content %}

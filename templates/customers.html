@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content %}
+<div style="margin-top:3%; margin-bottom:5%; margin-left:30%; padding:10px; width:80%">
+    <legend class="border-bottom mb-4" style="text-align: center;">List of Customers</legend>
+    <table class="table">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">AC No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone No</th>
+                <th scope="col">Account Balance</th>
+                <th scope="col">Pan No</th>
+            </tr>
+        </thead>
+        {% for customer in customers %}
+            <tbody style="font-size: medium;">
+                <tr>
+                  <th><a href="{% url 'profile' customer.account_no %}" style="text-decoration: none;">{{customer.account_no}}</a></th>
+                  <td>{{customer.name}}</td>
+                  <td>{{customer.email}}</td>
+                  <td>{{customer.phone_no}}</td>
+                  <td>{{customer.ac_balance}}</td>
+                  <td>{{customer.pan_no}}</td>
+                </tr>
+            </tbody>
+          {% endfor %}
+      </table>
+      <div class="border-top pt-3">
+        <small class="text-muted">
+            Add a New Customer? <a href="{% url 'add_customer'%}">Add</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

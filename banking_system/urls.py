@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from banking.views import home
+from banking.views import home,add_customer,customer_list,profile,transfer_history
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home,name='Bank'),
+    path('',home,name='GRIP'),
+    path('add_customer/',add_customer,name='add_customer'),
+    path('customers/',customer_list,name='customers'),
+   path('profile/<int:cust_id>',profile,name='profile'),
+   path('transfers/',transfer_history,name='transfers')
 ]

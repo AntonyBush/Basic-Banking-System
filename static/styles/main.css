@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body{
+    font-family: 'Lato',sans-serif;
+    font-size: large;
+    position: relative;
+    overflow-x: hidden;
+}
+.card-body {
+  border: 3px solid rgb(40, 100, 212);
+  padding: 20px;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-left: 50%;
+  border-radius: 10px;
+}
+
+
+.cont {
+  border: 3px solid rgb(40, 100, 212);
+  padding: 20px;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-left: 35%;
+  border-radius: 10px;
+}
+
+li {
+    float:left;
+}
+
+li a {
+    display: block;
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+li a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.active{
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-dark {
+  position: absolute;
+  width: 110%;
+  float: none;
+  height: 150px;
+  color:#f0f9ff;
+  background-color:#282d32;
+  padding: 25px 0;
+}
+  
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+  margin-top: 25px;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:40px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+ul {
+  top: 0;
+  left: 0;
+  width:100%;
+  position: fixed;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden;
+  z-index: 9999;
+  background-color: rgb(40, 100, 212);
+}
