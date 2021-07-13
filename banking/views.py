@@ -35,7 +35,7 @@ def add_customer(request):
 
 
 def customer_list(request):
-    customers = Customer.objects.all()
+    customers = Customer.objects.all().order_by('account_no')
     return render(request,'customers.html',{'customers':customers})
 
 def transfer_history(request):
@@ -65,7 +65,7 @@ def profile(request,cust_id):
                 transfer_money = Transfer(debit_ac=sender.account_no,credit_ac=receiver.account_no,transfer_amount=amount)
                 transfer_money.save()
                 messages.success(request, 'Amount Transfered Successfuly')
-                return redirect('transfers')
+                return redirect('profile',cust_id=sender.account_no)
                 
             else:
                 messages.error(request, 'Insufficient balance')
