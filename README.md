@@ -11,7 +11,11 @@
 - Bootstrap
 > ### Back-End:
 -  Django 
--  MYSQL
+> ### DataBase:
+-  PostgreSQL
 
 ### Flow of the website
 Home > View Customer > Select One Customer > Transfer Money > Select Receiver > View Customer
+
+### Website Link
+- https://antony-grip-bank.herokuapp.com/customers/
