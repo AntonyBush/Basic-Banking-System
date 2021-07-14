@@ -18,4 +18,4 @@
 Home > View Customer > Select One Customer > Transfer Money > Select Receiver > View Customer
 
 ### Website Link
-- https://antony-grip-bank.herokuapp.com/customers/
+- https://antony-grip-bank.herokuapp.com
